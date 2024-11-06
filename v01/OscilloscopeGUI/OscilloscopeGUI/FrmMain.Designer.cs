@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            comboBox1 = new ComboBox();
+            cbResources = new ComboBox();
             SuspendLayout();
             // 
-            // comboBox1
+            // cbResources
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(12, 12);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 0;
+            cbResources.FormattingEnabled = true;
+            cbResources.Location = new Point(12, 12);
+            cbResources.Name = "cbResources";
+            cbResources.Size = new Size(151, 28);
+            cbResources.TabIndex = 0;
             // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(429, 157);
-            Controls.Add(comboBox1);
+            Controls.Add(cbResources);
             Name = "FrmMain";
             Text = "Oscilloscope GUI v1.1";
             Load += FrmMain_Load;
@@ -53,6 +53,6 @@
 
         #endregion
 
-        private ComboBox comboBox1;
+        private ComboBox cbResources;
     }
 }

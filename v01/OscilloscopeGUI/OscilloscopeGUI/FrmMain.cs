@@ -19,7 +19,9 @@ namespace OscilloscopeGUI
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("FrmMain_Load...");
+            cbResources.Items.Clear();
+            cbResources.Items.AddRange(Oscilloscope.GetResources());
+            cbResources.SelectedIndex = cbResources.Items.Count - 1;
         }
     }
 }
