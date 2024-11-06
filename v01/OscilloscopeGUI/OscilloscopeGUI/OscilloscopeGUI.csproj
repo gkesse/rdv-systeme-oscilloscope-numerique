@@ -8,4 +8,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="OscilloscopeLIB">
+      <HintPath>..\..\..\v02\OscilloscopeLIB\OscilloscopeLIB\bin\Debug\net8.0-windows\OscilloscopeLIB.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
