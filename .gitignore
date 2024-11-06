@@ -1,32 +1,15 @@
-# Prerequisites
-*.d
+# directories
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+/**/github/
+/**/bin/
+/**/migrations/
+/**/.vs/
+/**/obj/
+/**/bin/
 
-# Precompiled Headers
-*.gch
-*.pch
+# files
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+/**/compose.override.yaml
+/**/compose.yaml
+/**/.env*
+/**/~*
