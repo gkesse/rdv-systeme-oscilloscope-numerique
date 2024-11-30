@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OscilloscopeGUI", "OscilloscopeGUI\OscilloscopeGUI.csproj", "{7877CDE7-4C41-490C-96E6-C7F3FCD671FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OscilloscopeGUI", "OscilloscopeGUI\OscilloscopeGUI.csproj", "{0D0161FE-DEE4-4B42-8A94-2E1D0BE2C78F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7877CDE7-4C41-490C-96E6-C7F3FCD671FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7877CDE7-4C41-490C-96E6-C7F3FCD671FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7877CDE7-4C41-490C-96E6-C7F3FCD671FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7877CDE7-4C41-490C-96E6-C7F3FCD671FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D0161FE-DEE4-4B42-8A94-2E1D0BE2C78F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D0161FE-DEE4-4B42-8A94-2E1D0BE2C78F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D0161FE-DEE4-4B42-8A94-2E1D0BE2C78F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D0161FE-DEE4-4B42-8A94-2E1D0BE2C78F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {BA441C60-1DE6-4287-A602-BC5471263819}
+		SolutionGuid = {2C8F2F1D-D46C-4B06-9C6D-DD6F113611EF}
 	EndGlobalSection
 EndGlobal

@@ -9,6 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Reference Include="Ivi.Visa">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\IVI Foundation\VISA\Microsoft.NET\Framework32\v2.0.50727\VISA.NET Shared Components 7.2.0\Ivi.Visa.dll</HintPath>
+    </Reference>
     <Reference Include="OscilloscopeLIB">
       <HintPath>..\..\..\v02\OscilloscopeLIB\OscilloscopeLIB\bin\Debug\net8.0-windows\OscilloscopeLIB.dll</HintPath>
     </Reference>

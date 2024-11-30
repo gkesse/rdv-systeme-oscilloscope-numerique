@@ -7,4 +7,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="NationalInstruments.Visa">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\IVI Foundation\VISA\Microsoft.NET\Framework32\v4.0.30319\NI VISA.NET 24.8\NationalInstruments.Visa.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

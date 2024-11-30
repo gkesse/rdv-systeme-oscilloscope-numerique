@@ -3,5 +3,6 @@
     "other": true,
     "comments": true,
     "strings": true
-  }
+  },
+  "cmake.sourceDirectory": "/mnt/c/dev/pratique/rdv-systeme-oscilloscope-numerique/v03"
 }

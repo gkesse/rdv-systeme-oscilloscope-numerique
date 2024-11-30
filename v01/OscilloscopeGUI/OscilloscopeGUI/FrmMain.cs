@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using OscilloscopeLIB;
 
 namespace OscilloscopeGUI
 {
@@ -19,9 +11,25 @@ namespace OscilloscopeGUI
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            cbResources.Items.Clear();
-            cbResources.Items.AddRange(Oscilloscope.GetResources());
-            cbResources.SelectedIndex = cbResources.Items.Count - 1;
+            RefreshDevices();
+        }
+
+        private void RefreshDevices()
+        {
+            cmbResources.Items.Clear();
+            cmbResources.Items.AddRange(Oscilloscope.GetResources());
+            cmbResources.SelectedIndex = cmbResources.Items.Count - 1;
+        }
+
+        private string[] GetResources()
+        {
+            string[] results = new string[] { "Resource 1", "Resource 2", "Resource 3" };
+            return results;
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            RefreshDevices();
         }
     }
 }

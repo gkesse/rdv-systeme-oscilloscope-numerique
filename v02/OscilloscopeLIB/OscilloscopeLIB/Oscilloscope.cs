@@ -1,13 +1,24 @@
+using System.Diagnostics;
+using NationalInstruments.Visa;
 
-public class Oscilloscope
+namespace OscilloscopeLIB
 {
-    public static string[] GetResources()
+    public class Oscilloscope
     {
-        string[] results = [
-            "Ressource 1",
-                "Ressource 2",
-                "Ressource 3"
-        ];
-        return results;
+        static ResourceManager _resManager = new ResourceManager();
+
+        public static string[] GetResources()
+        {
+            string[] results = new string[] { };
+            try
+            {
+                results = _resManager.Find("?*").ToArray();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+            return results;
+        }
     }
 }
