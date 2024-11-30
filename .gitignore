@@ -11,7 +11,5 @@
 
 # files
 
-/**/compose.override.yaml
-/**/compose.yaml
-/**/.env*
 /**/~*
+/**/*.bak
