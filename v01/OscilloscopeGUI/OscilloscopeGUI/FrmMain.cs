@@ -4,6 +4,8 @@ namespace OscilloscopeGUI
 {
     public partial class FrmMain : Form
     {
+        Oscilloscope _osc;
+
         public FrmMain()
         {
             InitializeComponent();
@@ -30,6 +32,22 @@ namespace OscilloscopeGUI
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             RefreshDevices();
+        }
+
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+            if (cmbResources.Items.Count == 0)
+            {
+                MessageBox.Show("Please connect an oscilloscope, then click Refresh");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(cmbResources.Text))
+            {
+                MessageBox.Show("Please select a device");
+                return;
+            }
+
+            _osc = new Oscilloscope();
         }
     }
 }

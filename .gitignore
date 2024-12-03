@@ -13,3 +13,5 @@
 
 /**/~*
 /**/*.bak
+/**/envs.sh
+/**/settings.json

@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>data/img/app-logo.ico</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>472</width>
+    <height>143</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ReadyScope - Oscilloscope numérique</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/data/img/app-logo.ico</normaloff>:/data/img/app-logo.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionLoadConfiguration">
+   <property name="text">
+    <string>&amp;Load configuration</string>
+   </property>
+  </action>
+  <action name="actionSaveConfiguration">
+   <property name="text">
+    <string>&amp;Save configuration</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+  </action>
+  <action name="actionSaveData">
+   <property name="text">
+    <string>&amp;Save data</string>
+   </property>
+  </action>
+  <action name="actionClearData">
+   <property name="text">
+    <string>&amp;Clear data</string>
+   </property>
+  </action>
+  <action name="actionHowTo">
+   <property name="text">
+    <string>&amp;How to</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

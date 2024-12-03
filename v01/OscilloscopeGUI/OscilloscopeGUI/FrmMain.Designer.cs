@@ -84,6 +84,7 @@
             btnConnect.TabIndex = 2;
             btnConnect.Text = "&Connect to selected device";
             btnConnect.UseVisualStyleBackColor = true;
+            btnConnect.Click += btnConnect_Click;
             // 
             // grbAcquisition
             // 
