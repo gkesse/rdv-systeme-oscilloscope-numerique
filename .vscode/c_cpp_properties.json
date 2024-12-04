@@ -4,10 +4,11 @@
       "name": "Linux",
       "includePath": [
         "${workspaceFolder}/**",
-        "${workspaceFolder}/v03/build/**",
+        "${workspaceFolder}/v03/parser",
         "/home/admins/Qt5.14.2/5.14.2/gcc_64/include",
         "/home/admins/Qt5.14.2/5.14.2/gcc_64/include/QtCore",
-        "/home/admins/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets"
+        "/home/admins/Qt5.14.2/5.14.2/gcc_64/include/QtWidgets",
+        "/home/admins/Qt5.14.2/5.14.2/gcc_64/include/QtGui"
       ],
       "defines": [],
       "compilerPath": "/usr/bin/g++",

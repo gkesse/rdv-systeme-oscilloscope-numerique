@@ -11,10 +11,17 @@ Widgets
 
 set(SRC_FILES
 main.cpp
+DTerminal.cpp
+parser/FrameParser.cpp
+scope/Scope.cpp
+scope/Scopes.cpp
+scope/DScopeQT.cpp
+scope/DScopesQT.cpp
+scope/DScopesQTWidget.cpp
 )
 
 set(UI_FILES
-mainwindow.cpp
+MainWindow.cpp
 )
 
 set(RCC_FILES
@@ -24,6 +31,11 @@ resources.qrc
 add_definitions(-DDEVELMODE)
 
 qt_wrap_ui(${UI_FILES})
+
+include_directories(
+parser
+scope
+)
 
 add_executable(ReadyScope
 ${SRC_FILES}
