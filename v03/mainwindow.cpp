@@ -40,7 +40,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
-    saveSettings("settings.ini");
+    saveSettings();
     delete ui;
 }
 
@@ -77,11 +77,12 @@ bool MainWindow::loadSettings(const QString &fileName)
 
 bool MainWindow::saveSettings(const QString &fileName)
 {
-    if (fileName == "")
-        return false;
+    QSettings *settings;
 
-    DSettings *settings;
-    settings = new DSettings(fileName);
+    if (fileName == "")
+        settings = new QSettings(QSettings::IniFormat, QSettings::UserScope, "ReadyDev", "ReadyScope");
+    else
+        settings = new QSettings(fileName, QSettings::IniFormat);
 
     if (settings->status() != QSettings::NoError)
         return false;
