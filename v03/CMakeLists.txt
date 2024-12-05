@@ -12,6 +12,7 @@ Widgets
 set(SRC_FILES
 main.cpp
 DTerminal.cpp
+DSettings.cpp
 parser/FrameParser.cpp
 scope/Scope.cpp
 scope/Scopes.cpp

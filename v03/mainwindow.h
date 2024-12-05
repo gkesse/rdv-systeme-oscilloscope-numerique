@@ -20,11 +20,21 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+protected:
+    void timerEvent(QTimerEvent *event);
+
+private:
+    bool loadSettings(const QString &fileName = "");
+    bool saveSettings(const QString &fileName = "");
+
+private slots:
+    void on_edtRefreshRate_valueChanged(int i);
+
 private:
     Ui::MainWindow *ui;
+    int timer;
     // FrameParser fp;
     // DTerminal terminal;
-    // int timer;
     // int totreceiveddata;
     // int nanvalue;
     // unsigned buffersize;
