@@ -7,12 +7,14 @@ set(CMAKE_AUTOUIC ON)
 
 find_package(Qt5 REQUIRED COMPONENTS
 Widgets
+SerialPort
 )
 
 set(SRC_FILES
 main.cpp
 DTerminal.cpp
 DSettings.cpp
+IoDevice.cpp
 parser/FrameParser.cpp
 scope/Scope.cpp
 scope/Scopes.cpp
@@ -46,4 +48,5 @@ ${RCC_FILES}
 
 target_link_libraries (ReadyScope
 Qt5::Widgets
+Qt5::SerialPort
 )

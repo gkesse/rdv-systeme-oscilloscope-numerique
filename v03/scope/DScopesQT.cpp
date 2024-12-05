@@ -15,6 +15,17 @@ DScopesQT::~DScopesQT()
 {
 }
 
+void DScopesQT::Render()
+{
+    painter.begin(surface);
+
+    for (unsigned i = 0; i < handles.size(); i++)
+    {
+    }
+
+    painter.end();
+}
+
 void DScopesQT::Resize(QImage *s, unsigned nw, unsigned nh, bool _alpha)
 {
     // surface = s;

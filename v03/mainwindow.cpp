@@ -36,6 +36,15 @@ MainWindow::MainWindow(QWidget *parent)
     ui->layScope->addWidget(dscopes);
     resize(800, 640);
     loadSettings();
+
+    connect(&iodev, SIGNAL(readyRead(QByteArray)), this, SLOT(iodevread(QByteArray)));
+    connect(&iodev, SIGNAL(connected()), this, SLOT(ioconnected()));
+    // connect(&iodev, SIGNAL(disconnected()), this, SLOT(iodisconnected()));
+    // connect(&iodev, SIGNAL(error(QString)), this, SLOT(ioerror(QString)));
+    // connect(&iodev, SIGNAL(connectionError()), this, SLOT(ioconnectionerror()));
+
+    QStringList arg = qApp->arguments();
+    qDebug() << arg;
 }
 
 MainWindow::~MainWindow()
@@ -46,7 +55,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::timerEvent(QTimerEvent *event)
 {
-    qDebug() << "MainWindow::timerEvent...";
+    dscopes->Render();
+    dscopes->repaint();
 }
 
 bool MainWindow::loadSettings(const QString &fileName)
@@ -101,4 +111,29 @@ void MainWindow::on_edtRefreshRate_valueChanged(int i)
         timer = 0;
     }
     timer = startTimer(1000 / i);
+}
+
+void MainWindow::iodevread(QByteArray ba)
+{
+}
+
+void MainWindow::ioconnected()
+{
+    qDebug() << "MainWindow::ioconnected...";
+}
+
+void MainWindow::on_btnPreviousPage_clicked()
+{
+    int current = ui->stackedWidget->currentIndex();
+    if (current <= 0)
+        return;
+    ui->stackedWidget->setCurrentIndex(current - 1);
+}
+
+void MainWindow::on_btnNextPage_clicked()
+{
+    int current = ui->stackedWidget->currentIndex();
+    if (current >= ui->stackedWidget->count() - 1)
+        return;
+    ui->stackedWidget->setCurrentIndex(current + 1);
 }

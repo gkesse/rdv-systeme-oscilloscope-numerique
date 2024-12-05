@@ -1,5 +1,7 @@
 #include "Scopes.h"
 
+#include <algorithm>
+
 Scopes::Scopes(unsigned _w, unsigned _h)
     : w(_w),
       h(_h)
@@ -15,6 +17,21 @@ void Scopes::Resize(unsigned nw, unsigned nh)
     // w = nw;
     // h = nh;
     // Reshape();
+}
+
+unsigned Scopes::_AddScope()
+{
+    unsigned h = GenerateHandle();
+    handles.push_back(h);
+    return h;
+}
+
+unsigned Scopes::GenerateHandle()
+{
+    unsigned handle = 0;
+    while (std::find(handles.begin(), handles.end(), handle) != handles.end())
+        handle++;
+    return handle;
 }
 
 void Scopes::Reshape()
