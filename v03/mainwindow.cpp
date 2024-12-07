@@ -2,8 +2,10 @@
 #include "ui_MainWindow.h"
 #include "DScopesQTWidget.h"
 #include "DSettings.h"
+#include "ParseConnection.h"
 
 #include <QSettings>
+#include <QMessageBox>
 #include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -40,8 +42,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(&iodev, SIGNAL(readyRead(QByteArray)), this, SLOT(iodevread(QByteArray)));
     connect(&iodev, SIGNAL(connected()), this, SLOT(ioconnected()));
     // connect(&iodev, SIGNAL(disconnected()), this, SLOT(iodisconnected()));
-    // connect(&iodev, SIGNAL(error(QString)), this, SLOT(ioerror(QString)));
-    // connect(&iodev, SIGNAL(connectionError()), this, SLOT(ioconnectionerror()));
+    connect(&iodev, SIGNAL(error(QString)), this, SLOT(ioerror(QString)));
+    connect(&iodev, SIGNAL(connectionError()), this, SLOT(ioconnectionerror()));
 
     QStringList arg = qApp->arguments();
     qDebug() << arg;
@@ -115,11 +117,38 @@ void MainWindow::on_edtRefreshRate_valueChanged(int i)
 
 void MainWindow::iodevread(QByteArray ba)
 {
+    qDebug() << "MainWindow::iodevread...";
 }
 
 void MainWindow::ioconnected()
 {
     qDebug() << "MainWindow::ioconnected...";
+}
+
+void MainWindow::ioerror(QString err)
+{
+    QMessageBox::critical(this, "ReadyScope - Error", QString("I/O error: %1").arg(err));
+}
+
+void MainWindow::ioconnectionerror()
+{
+    QMessageBox::critical(this, "ReadyScope - Error", "Connection error");
+    // UiToIdle();
+}
+
+void MainWindow::on_btnConnect_clicked()
+{
+    ConnectionData conn;
+
+    bool ok = ParseConnection(ui->edtHostPort->text(), conn);
+
+    if (!ok)
+    {
+        QMessageBox::critical(this, "ReadyScope - Device specification error", conn.message);
+        return;
+    }
+
+    iodev.open(conn);
 }
 
 void MainWindow::on_btnPreviousPage_clicked()

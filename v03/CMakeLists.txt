@@ -15,6 +15,7 @@ main.cpp
 DTerminal.cpp
 DSettings.cpp
 IoDevice.cpp
+parser/ParseConnection.cpp
 parser/FrameParser.cpp
 scope/Scope.cpp
 scope/Scopes.cpp
@@ -35,7 +36,7 @@ add_definitions(-DDEVELMODE)
 
 qt_wrap_ui(${UI_FILES})
 
-include_directories(
+include_directories(.
 parser
 scope
 )

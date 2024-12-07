@@ -36,7 +36,7 @@ private slots:
     // void on_actionListSerialPorts_triggered();
     // void on_actionSaveConfiguration_triggered();
     // void on_actionLoadConfiguration_triggered();
-    // void on_uipbConnect_clicked();
+    void on_btnConnect_clicked();
     // void on_uiAfterGlow_stateChanged(int state);
     void on_edtRefreshRate_valueChanged(int i);
     // void on_uiNanValue_valueChanged(int i);
@@ -45,8 +45,8 @@ private slots:
     void iodevread(QByteArray ba);
     void ioconnected();
     // void iodisconnected();
-    // void ioerror(QString err);
-    // void ioconnectionerror();
+    void ioerror(QString err);
+    void ioconnectionerror();
 
     // void dsrChanged(bool);
     // void aboutToClose();

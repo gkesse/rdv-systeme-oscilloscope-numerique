@@ -22,7 +22,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="page">
        <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -486,7 +486,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_4"/>
+              <widget class="QLineEdit" name="edtHostPort"/>
              </item>
              <item>
               <spacer name="horizontalSpacer_6">
