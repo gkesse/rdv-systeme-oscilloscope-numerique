@@ -142,7 +142,8 @@ bool IoDevice::close()
 
 void IoDevice::SERGotData()
 {
-    qDebug() << "IoDevice::SERGotData...";
+    QByteArray ba = deviceSER.readAll();
+    emit readyRead(ba);
 }
 
 void IoDevice::SERError(QSerialPort::SerialPortError err)

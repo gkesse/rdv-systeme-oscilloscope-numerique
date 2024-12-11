@@ -19,7 +19,7 @@ bool ParseConnection(QString str, ConnectionData &conn)
     }
     else if (parts[0] == "SER")
     {
-        conn.port = "/dev/pts/11";
+        conn.port = "/dev/pts/8";
         conn.baud = QSerialPort::Baud4800;
         conn.type = DevSerialConnection;
         return true;

@@ -117,7 +117,8 @@ void MainWindow::on_edtRefreshRate_valueChanged(int i)
 
 void MainWindow::iodevread(QByteArray ba)
 {
-    qDebug() << "MainWindow::iodevread...";
+    qDebug() << "MainWindow::iodevread..."
+             << "|data=" << ba;
 }
 
 void MainWindow::ioconnected()
